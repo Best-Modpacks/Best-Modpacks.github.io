@@ -18,7 +18,7 @@
 			}
 
 			.navbar {
-				border-bottom: 1px solid #EEEEEE;
+				border-bottom: 1px solid #DDDDDD;
 			}
 		</style>
 	</head>
@@ -42,7 +42,7 @@
 						{% endif %}
 						{% for post in posts %}
 						<li class="nav-item">
-							<a class="nav-link" href="{{post.url}}">{{site.data.languages[post.lang].icon}}</a>
+							<a class="nav-link" href="{{post.url}}" title="{{site.data.languages[post.lang].alt_msg}}">{{site.data.languages[post.lang].icon}}</a>
 						</li>
 						{% endfor %}
 					</ul>

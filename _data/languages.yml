@@ -1,9 +1,12 @@
 en:
   alt_msg: Read this page in english!
   icon: 🇬🇧
+  lang: English
 fr:
   alt_msg: Lire cette page en français!
   icon: 🇫🇷
+  lang: Français
 es:
   alt_msg: ¡Leer esta pagina en español!
   icon: 🇪🇸
+  lang: Español
