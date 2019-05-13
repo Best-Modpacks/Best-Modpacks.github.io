@@ -41,9 +41,11 @@
 						{% assign posts = site.pages | where: "ref", page.ref %}
 						{% endif %}
 						{% for post in posts %}
+						{% if post.lang != page.lang %}
 						<li class="nav-item">
 							<a class="nav-link" href="{{post.url}}" title="{{site.data.languages[post.lang].alt_msg}}">{{site.data.languages[post.lang].icon}}</a>
 						</li>
+						{% endif %}
 						{% endfor %}
 					</ul>
 				</div>
