@@ -4,4 +4,4 @@ layout: post
 lang: es
 ---
 
-Esto no es un importante articulo pero es estupendo que existe.
+Esto articulo no es muy importante pero es estupendo que existe.
