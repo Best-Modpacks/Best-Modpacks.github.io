@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{ page.title }}</title>
+		<title>{{page.title}}</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<!-- jQuery library -->
@@ -25,7 +25,7 @@
 	<body>
 		<nav style="background: rgba(255, 255, 255, 1.0);" class="navbar navbar-expand-sm navbar-default navbar-light fixed-top">
 			<div class="container">
-				<a class="navbar-brand" href="#">Best Modpacks</a>
+				<a class="navbar-brand" href="{{site.url}}/{{page.lang}}">Best Modpacks</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -34,38 +34,17 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">Home</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
 					</ul>
 					<ul class="navbar-nav ml-auto">
+						{% assign posts = site.posts | where: "ref", page.ref %}
+						{% if posts.size == 0 %}
+						{% assign posts = site.pages | where: "ref", page.ref %}
+						{% endif %}
+						{% for post in posts %}
 						<li class="nav-item">
-							<a class="nav-link" href="#">Shop</a>
+							<a class="nav-link" href="{{post.url}}">{{site.data.languages[post.lang].icon}}</a>
 						</li>
+						{% endfor %}
 					</ul>
 				</div>
 			</div>

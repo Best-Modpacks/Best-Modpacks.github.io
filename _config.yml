@@ -1,5 +1,7 @@
-title: Best Modpacks | Learn useful things about Minecraft mods and modpacks
+title: Learn useful things about Minecraft mods and modpacks | Best Modpacks
 markdown: kramdown
 highlighter: true
+url: https://best-modpacks.github.io/
 plugins:
   - jekyll-sitemap
+  - jekyll-redirect-from
