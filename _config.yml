@@ -1,4 +1,5 @@
 title: Best Modpacks | Learn useful things about Minecraft mods and modpacks
 markdown: kramdown
+highlighter: true
 plugins:
   - jekyll-sitemap
